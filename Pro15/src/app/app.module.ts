@@ -9,13 +9,15 @@ import { UserListComponent } from './user-list/user-list.component';
 import { DataService } from './data.service';
 import { AccessRoleGuard } from './access-role.guard';
 import { HttpClientModule } from '@angular/common/http';
+import { UserPostComponent } from './user-post/user-post.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ErrorComponent,
     UserProfileComponent,
-    UserListComponent
+    UserListComponent,
+    UserPostComponent
   ],
   imports: [
     BrowserModule,

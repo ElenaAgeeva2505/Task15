@@ -1,0 +1,15 @@
+<h3>Текущие значения</h3>
+  {{ currentAuth | json }}
+  
+  
+  <div class="btn-group container" role="group" aria-label="Basic mixed styles example">
+    <button (click)="updateAuthState()" type="button" class="btn btn-danger">Записать данные в хранилище</button>
+    <button (click)="resetAuthState()" type="button" class="btn btn-warning">Сбросить хранилище</button>
+  </div>
+
+  <div>
+    <app-add-task></app-add-task>
+    <app-view-tasks></app-view-tasks>
+  </div>
+
+

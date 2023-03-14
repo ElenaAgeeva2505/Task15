@@ -10,6 +10,8 @@ import { AuthState } from 'src/store/auth.state';
 import { AddTaskComponent } from './add-task/add-task.component';
 import { ViewTasksComponent } from './view-tasks/view-tasks.component';
 import { ResComponent } from './res/res.component';
+import { TodoService } from './service/task.service';
+import { FormBuilder } from '@angular/forms';
 
 
 @NgModule({
@@ -26,7 +28,7 @@ import { ResComponent } from './res/res.component';
     NgxsLoggerPluginModule.forRoot(),
    // NgxsReduxDevtoolsPluginModule.forRoot()
   ],
-  providers: [],
+  providers: [TodoService,FormBuilder],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

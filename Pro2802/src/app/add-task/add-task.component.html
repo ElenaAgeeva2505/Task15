@@ -1,9 +1,7 @@
-<div>
+<div [formGroup]="todoForm">
     <input type="input" formControlName="todo" />
   </div>
 
   <div>
-    <button [disabled]="todoForm.invalid" (click)="addTasks()">
-      Add
-    </button>
+    <button [disabled]="todoForm.invalid" (click)="addTasks()">Add</button>
   </div>

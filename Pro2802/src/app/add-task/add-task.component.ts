@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Todo, TodoService } from './../service/task.service';
 
 @Component({
@@ -16,9 +16,11 @@ export class AddTaskComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.todoForm = this.formBuilder.group({
-      todo: ['', Validators.required],
-    });
+    this.todoForm = new FormGroup(
+      {
+        todo:new FormControl('',[Validators.required])
+      }
+    )
   }
 
   addTasks() {
